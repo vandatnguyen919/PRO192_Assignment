@@ -58,7 +58,7 @@ public class CarManager {
                             case 3: String id = Inputter.inputNonBlankStr("-Enter an ID");
                                 System.out.println((bList.searchID(id) != -1) ? ("Found! " + "\n" + bList.get(bList.searchID(id)) ) : "Not found"); break;
                             case 4: bList.updateBrand(); break;
-                            case 5: bList.saveToFile(filename1_2);
+                            case 5: bList.saveToFile(filename1_2); break;
                         }
                     } while (choice > 0 && choice < bOps.size());
                     choice = 1; break;
@@ -80,11 +80,11 @@ public class CarManager {
                             case 3: cList.addCar(); break;
                             case 4: cList.removeCar(); break;
                             case 5: cList.updateCar(); break;
-                            case 6: cList.saveToFile(filename2_2);;
+                            case 6: cList.saveToFile(filename2_2); break;
                         }
                     } while (choice > 0 && choice < cOps.size());
                     choice = 2; break;
             }
-        } while (choice > 0 && choice <= ops.size() - 1);
+        } while (choice > 0 && choice < ops.size());
     }
 }
